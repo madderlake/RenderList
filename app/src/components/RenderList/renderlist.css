@@ -1,0 +1,146 @@
+.List {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: 60px;
+  grid-gap: 16px;
+  list-style-type: none;
+}
+
+.List__item {
+  line-height: 60px;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.List__selections {
+  display: flex;
+  visibility: hidden;
+  flex-wrap: nowrap;
+  margin: 16px;
+  width: 98%;
+  overflow-x: scroll;
+  gap: 8px;
+  list-style-type: none;
+  padding: 16px 8px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.05)
+}
+
+.List__selections.active {
+  visibility: visible;
+}
+.List__selections li {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1;
+  width: auto;
+  height: 35px;
+  font-weight: 600;
+  color: white;
+  padding: 0.25em;
+  cursor: pointer;
+}
+/* Taken from https://clrs.cc/ */
+
+.List__item--navy {
+  background-color: #001f3f;
+}
+
+.List__item--blue {
+  background-color: #0074d9;
+}
+
+.List__item--aqua {
+  background-color: #7fdbff;
+}
+
+.List__item--teal {
+  background-color: #39cccc;
+}
+
+.List__item--olive {
+  background-color: #3d9970;
+}
+
+.List__item--green {
+  background-color: #2ecc40;
+}
+
+.List__item--lime {
+  background-color: #01ff70;
+}
+
+.List__item--yellow {
+  background-color: #ffdc00;
+}
+
+.List__item--orange {
+  background-color: #ff851b;
+}
+
+.List__item--red {
+  background-color: #ff4136;
+}
+
+.List__item--maroon {
+  background-color: #85144b;
+}
+
+.List__item--fuchsia {
+  background-color: #f012be;
+}
+
+.List__item--purple {
+  background-color: #b10dc9;
+}
+
+.List__item--black {
+  background-color: #111111;
+}
+
+.List__item--gray {
+  background-color: #aaaaaa;
+}
+
+.List__item--silver {
+  background-color: #dddddd;
+}
+.List__item--selected {
+  background-color: white;
+  color: grey;
+  text-shadow: none;
+}
+/** ------------------------------**/
+
+.List__item--selected {
+  border: 1px solid blue;
+}
+
+.drag-selection-box {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1000;
+}
+body,
+.List {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+}
+.List_container {
+  margin: 40px auto;
+  /* max-width: 80%; */
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  min-width: 1280px
+}
+
+
