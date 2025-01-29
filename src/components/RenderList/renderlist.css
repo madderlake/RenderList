@@ -8,8 +8,13 @@
 }
 
 .List__item {
-  line-height: 60px;
-  text-align: center;
+  /* line-height: 60px;
+  text-align: center; */
+  display: flex;
+  line-height: 1.5;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25em;
   color: white;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
@@ -21,7 +26,6 @@
   visibility: hidden;
   flex-wrap: nowrap;
   margin: 16px 12px;
-  /* width: 90%; */
   overflow-x: scroll;
   gap: 8px;
   list-style-type: none;
@@ -135,12 +139,9 @@ body,
 }
 .List_container {
   margin: 40px auto;
-  /* max-width: 80%; */
-  padding: 2rem;
   position: relative;
-  overflow: hidden;
   height: 100%;
-  min-width: 100%;
+  width: 100%;
 }
 
 #root {
